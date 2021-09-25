@@ -4,7 +4,7 @@
 const container = document.querySelector('.blogs');
 
 const renderPosts = async () => {
-  let uri = 'http://localhost:3000/posts';
+  let uri = 'http://localhost:3000/posts?_sort=likes&_order=desc';
 
   const res = await fetch(uri); // the res object is not a json, see next line to get json data from response
   const posts = await res.json();
